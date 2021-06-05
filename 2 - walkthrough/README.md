@@ -129,7 +129,7 @@ As we learned, helm takes a template from a chart along with user supplied confi
 
 lets see what we get with our wordpress installation
 ```
-helm get manifest wordpress > wp.yaml
+helm get manifest my-wordpress > wp.yaml
 ```
 
 we can now see exactly what is being rendered for kubernetes to consume in the wp.yaml file. This is very useful when debugging applications
@@ -148,7 +148,7 @@ kubectl delete pvc --all
 with a clean cluster, install the chart again using either the values.yaml we updated
 
 ```
-helm install wordpress bitnami/wordpress -f values.yaml
+helm install my-wordpress bitnami/wordpress -f values.yaml
 ```
 copy the values to a new file values2.yaml
 ```
@@ -165,7 +165,7 @@ image:
 
 lets perform an upgrade. 
 ```
-helm upgrade wordpress bitnami/wordpress -f values2.yaml
+helm upgrade my-wordpress bitnami/wordpress -f values2.yaml
 ```
 We should see the new pod starting and the old one rolling off. Notice the only the container for wordpress is changing.
 
@@ -173,7 +173,7 @@ to validate use describe
 ```
 # use this to get the pod
 kubectl get pods
-kubectl describe pod wordpress-698558bdd4-gfbpd | grep image
+kubectl describe pod my-wordpress-698558bdd4-gfbpd | grep image
 ```
 we should see our updated image being pulled
 ```
@@ -188,20 +188,20 @@ Lets roll back to the earlier version, as I dont like being on latest.
 ```
 helm list
 
-wordpress	dev      	2       	2020-08-02 23:31:34.720113505 -0400 EDT	deployed	wordpress-9.4.2	5.4.2      
+my-wordpress	dev      	2       	2020-08-02 23:31:34.720113505 -0400 EDT	deployed	wordpress-9.4.2	5.4.2      
 ```
 
 here we see that there are two revisions. lets roll back to the first
 
 ```
-helm rollback wordpress 1
+helm rollback my-wordpress 1
 Rollback was a success! Happy Helming!
 ```
 
 Again we should see the wordpress prod cycling, and after it is up we can verify the image indeed changed, this time using the values command
 
 ```
-helm get values wordpress --all
+helm get values my-wordpress --all
 ```
 
 we should see our original image being used. cool, weve successfully rolled back our application.
