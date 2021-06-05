@@ -19,7 +19,7 @@ helm repo update
 ```
 
 ```
-helm install wordpress bitnami/wordpress
+helm install my-wordpress bitnami/wordpress
 ```
 
 should see the following :
@@ -87,19 +87,19 @@ update the values in service.type to NodePort, and set the nodePorts.http to "30
 if we want to validate our values before we run we use the `dry-run` command
 
 ```
-helm install wordpress bitnami/wordpress --dry-run -f values.yaml
+helm install my-wordpress bitnami/wordpress --dry-run -f values.yaml
 ```
 
 this is useful when debugging installation failures. for more see [here](https://helm.sh/docs/chart_template_guide/debugging/)
 
 ```
-helm install wordpress bitnami/wordpress -f values.yaml
+helm install my-wordpress bitnami/wordpress -f values.yaml
 ```
 ---
 ## Using params -> 
 
 ```
-helm install wordpress bitnami/wordpress --set service.type=NodePort --set service.nodePorts.http=30000 --set service.nodePorts.https=30001
+helm install my-wordpress bitnami/wordpress --set service.type=NodePort --set service.nodePorts.http=30000 --set service.nodePorts.https=30001
 ```
 
 ---
