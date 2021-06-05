@@ -82,6 +82,8 @@ Download the default values so we can edit them
 wget https://raw.githubusercontent.com/bitnami/charts/master/bitnami/wordpress/values.yaml
 ```
 
+Add any non-empty strings you like for wordpresspassword, mariadb.auth.rootPassword, mariadb.auth.password
+
 update the values in service.type to NodePort, and set the nodePorts.http to "30000" and nodePorts.https to "30001"
 
 if we want to validate our values before we run we use the `dry-run` command
