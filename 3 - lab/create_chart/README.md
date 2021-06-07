@@ -164,7 +164,7 @@ helm install chart /home/CSCC/afarag/helm_lab/chart-0.1.0.tgz --set service.type
 This should behave like before - since all we are doing is pointing to a tar vs a file. If we remember - thats all what helm charts/repos are when they are published to repositories. Its a fancy hosted directory to packaged up helm charts.
 
 
-## Adding dependencies
+## Adding dependencies (OPTIONAL)
 
 Helm allows you to use other charts as dependencies by updating the Chart.yml. lets update it and add a dependency.
 
