@@ -27,6 +27,11 @@ move the binary
 sudo mv linux-amd64/helm /usr/local/bin/helm
 ```
 
+You may need to run the following to make helm executable:
+```
+sudo chmod +x /usr/local/bin/helm
+```
+
 add the stable repo
 ```
 helm repo add stable https://charts.helm.sh/stable
