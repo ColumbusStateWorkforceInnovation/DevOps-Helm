@@ -22,37 +22,7 @@ kubectl delete pvc --all
 
 
 
-Make sure you have helm installed
-
-
-## Download and install helm
-
-Run the following commands
-
-
-download
-```
-wget https://get.helm.sh/helm-v3.2.4-linux-amd64.tar.gz
-```
-unpack
-```
-tar -zxvf helm-v3.2.4-linux-amd64.tar.gz 
-```
-move the binary
-```
-sudo mv linux-amd64/helm /usr/local/bin/helm
-```
-
-add the stable repo
-```
-helm repo add stable https://kubernetes-charts.storage.googleapis.com/
-```
-and update
-
-```
-helm repo update
-```
-
+**Make sure you have helm installed from part 1 of this repo**
 
 ---
 
