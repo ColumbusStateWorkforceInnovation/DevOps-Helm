@@ -119,9 +119,8 @@ helm get values my-wordpress --all
 ---
 once the pods are both up, use the minikube service command to expose the port
 ```
-minikube service wordpress -n dev
+minikube service my-wordpress
 ```
-*note* `-n dev` is used because that is the namespace I am working in.
 
 you should be able to visit `https://172.17.0.3:30001/` or `http://172.17.0.3:30000/` and see the application running!
 
