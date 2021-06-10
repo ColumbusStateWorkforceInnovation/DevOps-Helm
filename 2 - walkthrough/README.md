@@ -146,42 +146,25 @@ kubectl delete pvc --all
 
 ## helm versioning
 
-with a clean cluster, install the chart again using either the values.yaml we updated
+with a clean cluster, install a new chart:  the wordpress available from stable repo
 
 ```
-helm install my-wordpress bitnami/wordpress -f values.yaml
-```
-copy the values to a new file values2.yaml
-```
-cp values.yaml values2.yaml
+helm install stable-wordpress stable/wordpress
 ```
 
-inside the new yaml file, change the tag of the wordpress image to latest and save
+lets perform an upgrade by changing the value of image.tag with the --set operator
 ```
-image:
-  registry: docker.io
-  repository: bitnami/wordpress
-  tag: latest
+helm upgrade stable-wordpress stable/wordpress --set image.tag=latest
 ```
-
-lets perform an upgrade. 
-```
-helm upgrade my-wordpress bitnami/wordpress -f values2.yaml
-```
-We should see the new pod starting and the old one rolling off. Notice the only the container for wordpress is changing.
+We should see the new pod starting and the old one rolling off. 
 
 to validate use describe
 ```
 # use this to get the pod
 kubectl get pods
-kubectl describe pod my-wordpress-698558bdd4-gfbpd | grep image
+kubectl describe pod stable-wordpress-698558bdd4-gfbpd | grep image
 ```
 we should see our updated image being pulled
-```
-Normal  Pulled     7m14s  kubelet, minikube  Successfully pulled image "docker.io/bitnami/wordpress:latest"
-```
-
-
 ---
 
 Lets roll back to the earlier version, as I dont like being on latest.
@@ -189,20 +172,20 @@ Lets roll back to the earlier version, as I dont like being on latest.
 ```
 helm list
 
-my-wordpress	dev      	2       	2020-08-02 23:31:34.720113505 -0400 EDT	deployed	wordpress-9.4.2	5.4.2      
+stable-wordpress	dev      	2       	2020-08-02 23:31:34.720113505 -0400 EDT	deployed	wordpress-9.4.2	5.4.2      
 ```
 
 here we see that there are two revisions. lets roll back to the first
 
 ```
-helm rollback my-wordpress 1
+helm rollback stable-wordpress 1
 Rollback was a success! Happy Helming!
 ```
 
 Again we should see the wordpress prod cycling, and after it is up we can verify the image indeed changed, this time using the values command
 
 ```
-helm get values my-wordpress --all
+helm get values stable-wordpress --all
 ```
 
 we should see our original image being used. cool, weve successfully rolled back our application.
