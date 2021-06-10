@@ -40,7 +40,7 @@ tar -zxvf helm-v3.2.4-linux-amd64.tar.gz
 ```
 move the binary
 ```
-sudo mv linux-amd64/helm /user/local/bin/helm
+sudo mv linux-amd64/helm /usr/local/bin/helm
 ```
 
 add the stable repo
