@@ -112,8 +112,8 @@ helm will use values from the provided file or the command line arguments *OVER*
 lets verify this.
 ```
 # this will show user supplied
-helm get values wordpress
-helm get values wordpress --all
+helm get values my-wordpress
+helm get values my-wordpress --all
 ```
 
 ---
