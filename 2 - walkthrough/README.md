@@ -9,14 +9,6 @@ watch kubectl get all
 
 lets use a chart to install wordpress
 
-if we visit the [wordpress chart](https://github.com/helm/charts/tree/master/stable/wordpress) repo. It refers us to use a different repository [here](https://github.com/bitnami/charts/tree/master/bitnami/wordpress)
-
-lets add it and install-
-```
-helm repo add bitnami https://charts.bitnami.com/bitnami
-helm repo update
-
-```
 
 ```
 helm install my-wordpress bitnami/wordpress
