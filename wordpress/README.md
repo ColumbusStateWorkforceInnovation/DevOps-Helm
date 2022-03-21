@@ -1,4 +1,4 @@
-# Deploy the Bitnami WordPress chart
+# Deploy the Bitnami Wordpress chart using custom values
 
 ## References:
 
@@ -51,3 +51,7 @@ paste the command and output here
 ```
 paste the command and output here
 ```
+
+## Next up
+
+Complete the [Create a New chart](../create-chart/README.md) lab exercise.

@@ -25,7 +25,8 @@ See [Jeff's class notes](https://github.com/jeff-anderson-cscc/intro-to-helm) al
 
 ## Completing the assignment
 
-- [ ] [Install the Bitnami Wordpress chart using custom values](./wordpress/README.md)
+- [ ] Part 1: [Install the Bitnami Wordpress chart using custom values](./wordpress/README.md).
+- [ ] Part 2: [Create a New chart](../create-chart/README.md).
 
 ---
 
