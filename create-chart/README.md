@@ -162,9 +162,3 @@ paste the command and output here
 
 - [ ] Go back to the terminal window where you have `minikube tunnel` running and press `Ctrl` + `C` to stop the tunnel providing your password if prompted to do so.
 
-## Prepare your work for submission
-
-In your terminal window:
-- [ ] Create a new branch for your work using the command `git checkout -b homework-solution`
-- [ ] Run `git add .` to add all newly created files.
-- [ ] 
