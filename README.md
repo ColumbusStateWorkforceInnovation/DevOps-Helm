@@ -10,7 +10,7 @@ See [Jeff's class notes](https://github.com/jeff-anderson-cscc/intro-to-helm) al
 
 1. Deploy the Bitnami WordPress chart providing specific values for some chart parameters.
 1. Build and customize a new chart.
-1. Upgrade the chart you built.
+1. Upgrade and roll back the chart you built.
 
 
 ## Getting Started and Lab info:

@@ -11,6 +11,7 @@ As you debug, you may need to install and uninstall the chart a few times until 
 
 ## Instructions
 
+- [ ] Open a terminal navigate to the `wordpress` directory (the one with this file.)
 - [ ] Populate the [values.yaml](values.yaml) file with custom values for these parameters:
 
     | Key | Value |
@@ -24,11 +25,6 @@ As you debug, you may need to install and uninstall the chart a few times until 
     | service.type | NodePort |
     | service.nodePorts.http | 30080 |
     | service.nodePorts.https | 30443 |
-
-- [ ] Install the chart using the custom values you provided and record the command used and the output generated below:
-```
-paste the command and output here
-```
 
 - [ ] Using the [helm install](https://helm.sh/docs/helm/helm_install/) command, install the chart using the custom values in the `values.yaml` file.
 
@@ -54,4 +50,5 @@ paste the command and output here
 
 ## Next up
 
-Complete the [Create a New chart](../create-chart/README.md) lab exercise.
+* Complete Part 2: [Create a New chart](../create-chart/README.md).
+* After completing both parts, prepare your work for submission using the procedures in the main [README file](../README.md).

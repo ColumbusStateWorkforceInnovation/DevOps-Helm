@@ -78,8 +78,6 @@ helm get all react-release > v0.1.0-outut.txt
 
 ## Upgrade the app to a new release:
 
-- [ ] Go back to the terminal window where you have `minikube tunnel` running and press `Ctrl` + `C` to stop the tunnel providing your password if prompted.
-
 - [ ] In the `Chart.yaml` file, change the `appVersion` to "0.2.0".
 
 - [ ] Use the [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) command to rollout the new version.
@@ -92,11 +90,7 @@ paste the command and output here
 
 - [ ] Verify your chart is installed using the `helm ls` command.
 
-- [ ] In a separate terminal window, run `minikube tunnel` supplying your password when prompted to allocate an external IP for the load balancer.
-
-- [ ] Verify the external IP is allocated using `kubectl get svc`.
-
-- [ ] Copy the external IP address and past it into your browser to verify it display version 0.2.0 of the application:
+- [ ] Refresh your browser and verify the release now shows as 0.2.0. __NOTE:__ you may need to restart the `minikube tunnel` command if the refresh doesn't work.
 
 ![Hello React version 0.2.0 screen shot](../images/react-window-2.png)
 
@@ -159,3 +153,7 @@ paste the command and output here
 
 - [ ] Go back to the terminal window where you have `minikube tunnel` running and press `Ctrl` + `C` to stop the tunnel providing your password if prompted.
 
+## Next up
+
+* Complete Part 1: [Install the Bitnami Wordpress chart using custom values](../wordpress/README.md) if you haven't already done so.
+* After completing both parts, prepare your work for submission using the procedures in the main [README file](../README.md).
