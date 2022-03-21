@@ -1,29 +1,27 @@
 # Infrastructure Automation Helm
 
+In this lab you will demonstrate your mastery of Helm.
+
+## Resources
+
+See [Jeff's class notes](https://github.com/jeff-anderson-cscc/intro-to-helm) along with the [Helm  documentation](https://helm.sh/docs/).
 
 ## Objectives
 
-Introduction to helm, a guide for using some features, and a lab to help understand these features.
+1. Deploy the Bitnami Wordpress chart providing specific values for some chart parameters.
+1. Build and customize a new chart
+1. Upgrade the chart you built
 
+
+## Getting Started and Lab info:
+
+Copy the starter code from here into a new, __private__ repository in your personal GitHub account. When adding a collaborator, be sure to add the instructor ("CSCC-Instructor").
 
 ---
-## Getting Started:
 
-1 - Copy the starter code from here into a new, private repository in your personal GitHub account. When adding a collaborator, be sure to add the instructor ("CSCC-Instructor").
+## Completing the assignment
 
-Make sure to have gone through the material for helm (lectures/slides) before starting the lab.
-
----
-
-## Understanding the Starter Code
-
-1. intro (installation and intro to helm)
-2. walkthrough (guide for helm usage)
-3. lab (excerises for using helm)
-
-
-Within each directory, there is a readme with the excerise/directions. Follow the directions, and save your work.
-
+- [ ] [Install the Bitnami Wordpress chart using custom values](./wordpress/README.md)
 
 ---
 
