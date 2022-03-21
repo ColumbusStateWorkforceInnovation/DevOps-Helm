@@ -22,8 +22,8 @@ As you are debugging, you may need to install and uninstall the chart a few time
     | wordpressLastName | Your last name (i.e. `Anderson`) |
     | wordpressBlogName | Give it a name unique to your (i.e. `Jeff's Blog`) or something more fun and creative |
     | service.type | NodePort |
-    | nodePorts.http | 30080 |
-    | nodePorts.https | 30443 |
+    | service.nodePorts.http | 30080 |
+    | service.nodePorts.https | 30443 |
 
 - [ ] Install the chart using the custom values you provided and record the command used and the output generated below:
 ```
