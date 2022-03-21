@@ -1,7 +1,4 @@
-# Create a chart
-
-## References:
-
+# Create a New chart
 
 ## Instructions
 
