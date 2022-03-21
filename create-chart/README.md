@@ -9,7 +9,7 @@
 
 - [ ] Using the [helm create](https://helm.sh/docs/helm/helm_create/) command, create a chart named `hello-react`. 
 
-- [ ] Copy the command you used and the output generated and paste it below:
+- [ ] Copy the command you used, and the output generated and paste it below:
 
 ```
 paste the command and output here
@@ -36,7 +36,7 @@ helm install test-release hello-react --dry-run | grep image
 
 - [ ] Using the [helm install](https://helm.sh/docs/helm/helm_install/) command, install the chart using a release name of `react-release` without overriding any parameters.
 
-- [ ] Copy the command you used and the output generated and paste it below:
+- [ ] Copy the command you used, and the output generated and paste it below:
 
 ```
 paste the command and output here
@@ -54,7 +54,7 @@ paste the command and output here
 
 - [ ] Run the [helm history](https://helm.sh/docs/helm/helm_history/) command to see the history of your release,
 
-- [ ] Copy the command you used and the output generated and paste it below:
+- [ ] Copy the command you used, and the output generated and paste it below:
 
 ```
 paste the command and output here
@@ -65,7 +65,7 @@ paste the command and output here
 helm get all react-release > v0.1.0-outut.txt
 ```
 
-- [ ] View the new file and make sure it has around 160 lines of output and the top few lines look similar to this:
+- [ ] View the new file and make sure it has around 160 lines of output, and the top few lines look similar to this:
     ```
     NAME: react-release
     LAST DEPLOYED: Mon Mar 21 13:05:46 2022
@@ -81,13 +81,13 @@ helm get all react-release > v0.1.0-outut.txt
 
 ## Upgrade the app to a new release:
 
-- [ ] Go back to the terminal window where you have `minikube tunnel` running and press `Ctrl` + `C` to stop the tunnel providing your password if prompted to do so.
+- [ ] Go back to the terminal window where you have `minikube tunnel` running and press `Ctrl` + `C` to stop the tunnel providing your password if prompted.
 
 - [ ] In the `Chart.yaml` file, change the `appVersion` to "0.2.0".
 
 - [ ] Use the [helm upgrade](https://helm.sh/docs/helm/helm_upgrade/) command to rollout the new version.
 
-- [ ] Copy the command you used and the output generated and paste it below:
+- [ ] Copy the command you used, and the output generated and paste it below:
 
 ```
 paste the command and output here
@@ -105,7 +105,7 @@ paste the command and output here
 
 - [ ] Run the [helm history](https://helm.sh/docs/helm/helm_history/) command to see the history of your release,
 
-- [ ] Copy the command you used and the output generated and paste it below:
+- [ ] Copy the command you used, and the output generated and paste it below:
 
 ```
 paste the command and output here
@@ -116,7 +116,7 @@ paste the command and output here
 helm get all react-release > v0.2.0-outut.txt
 ```
 
-- [ ] View the new file and make sure it has around 160 lines of output and the top few lines look similar to this:
+- [ ] View the new file and make sure it has around 160 lines of output, and the top few lines look similar to this:
     ```
     NAME: react-release
     LAST DEPLOYED: Mon Mar 21 13:22:11 2022
@@ -134,7 +134,7 @@ helm get all react-release > v0.2.0-outut.txt
 
 - [ ] Using the [helm rollback](https://helm.sh/docs/helm/helm_rollback/) command, roll back to revision 1.
 
-- [ ] Copy the command you used and the output generated and paste it below:
+- [ ] Copy the command you used, and the output generated and paste it below:
 
 ```
 paste the command and output here
@@ -142,7 +142,7 @@ paste the command and output here
 
 - [ ] Run the [helm history](https://helm.sh/docs/helm/helm_history/) command to see the history of your release,
 
-- [ ] Copy the command you used and the output generated and paste it below:
+- [ ] Copy the command you used, and the output generated and paste it below:
 
 ```
 paste the command and output here
@@ -154,11 +154,11 @@ paste the command and output here
 
 - [ ] Use the [helm uninstall](https://helm.sh/docs/helm/helm_uninstall/) command to uninstall your chart.
 
-- [ ] Copy the command you used and the output generated and paste it below:
+- [ ] Copy the command you used, and the output generated and paste it below:
 
 ```
 paste the command and output here
 ```
 
-- [ ] Go back to the terminal window where you have `minikube tunnel` running and press `Ctrl` + `C` to stop the tunnel providing your password if prompted to do so.
+- [ ] Go back to the terminal window where you have `minikube tunnel` running and press `Ctrl` + `C` to stop the tunnel providing your password if prompted.
 
