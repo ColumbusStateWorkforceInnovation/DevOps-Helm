@@ -1,4 +1,4 @@
-# Infrastructure Automation Helm
+# Helm Introduction
 
 In this lab, you will demonstrate your mastery of Helm.
 
